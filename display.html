@@ -7,10 +7,12 @@
 <body>
 
 <!-- load the first image as a placeholder -->
-<img src="imgs/0/image0.png" width="960" height="720" class="result">
+<img src="output/imgs/0/image0.png" width="960" height="720" class="result">
 
 <script>
-    const path = "imgs/0/image" // set the path to the image files
+    // Point to generated diffusion frames (relative to this HTML file).
+    // Default matches OUTPUT_DIR layout from webcam2interrogator2images.ipynb: output/imgs/<folder>/image<N>.png
+    const path = "output/imgs/0/image"
     const result = document.querySelector(".result");
     const images = []
 
