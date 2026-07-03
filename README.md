@@ -55,7 +55,7 @@ display.html  →  animated exhibition view
 3. Add a Colab **Secret** named `HF_TOKEN` with a [Hugging Face read token](https://huggingface.co/settings/tokens)  
    - Enable **Read access to gated repos** and accept the [SD v1-4 license](https://huggingface.co/CompVis/stable-diffusion-v1-4)
 4. Run **setup** and **prompt 2 img**
-5. Run **capture webcam** — allow camera access, click **Capture** (optional install crop matches static v1 framing)
+5. Run **capture webcam** — a Gradio window opens; use the **`gradio.live` link** for live camera (Colab iframe often blocks webcam), click **Save for IIA4XAI**
 6. Run **webcam 2 prompt** to generate images
 
 Optional Colab Secrets: `IIA4XAI_OUTPUT_DIR`, `IIA4XAI_PROMPT_FILE` (see `.env.example`).
