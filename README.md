@@ -119,3 +119,5 @@ No API keys or tokens belong in source files. Before sharing, review [`SECURITY.
 
 **Marise van Noordenne**  
 MSc thesis project · Interactive installation art × AI explainability
+
+> **Note:** This README was drafted with AI assistance for clarity and structure. The thesis, installation concept, and technical prototype are my own work.
