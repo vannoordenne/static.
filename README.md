@@ -54,8 +54,9 @@ display.html  →  animated exhibition view
 2. **Runtime → Change runtime type → GPU** (T4 or better)
 3. Add a Colab **Secret** named `HF_TOKEN` with a [Hugging Face read token](https://huggingface.co/settings/tokens)  
    - Enable **Read access to gated repos** and accept the [SD v1-4 license](https://huggingface.co/CompVis/stable-diffusion-v1-4)
-4. Run the **setup** and **prompt 2 img** cells
-5. In **webcam 2 prompt**: click **📸 Capture webcam** when prompted (or set `input_source` to `upload` and pick a photo)
+4. Run **setup** and **prompt 2 img**
+5. Run **capture webcam** — allow camera access, click **Capture** (optional install crop matches static v1 framing)
+6. Run **webcam 2 prompt** to generate images
 
 Optional Colab Secrets: `IIA4XAI_OUTPUT_DIR`, `IIA4XAI_PROMPT_FILE` (see `.env.example`).
 
