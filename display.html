@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>N</title>
+</head>
+<body>
+
+<!-- load the first image as a placeholder -->
+<img src="imgs/0/image0.png" width="960" height="720" class="result">
+
+<script>
+    const path = "imgs/0/image" // set the path to the image files
+    const result = document.querySelector(".result");
+    const images = []
+
+    loadImages();
+    updateImage();
+
+    // load all images in the folder into the images array
+    function loadImages(){
+        for(let i = 0; i <= 30; i++){
+            images[i] = path+i.toString()+".png";
+        }
+    }
+
+    // cycle through the image array to display them after eachother
+    function updateImage(index = 0){
+        result.src = images[index];
+        let nextIndex = index === images.length - 1 ? 0 : ++index; // if end of the array is reached, set index to 0 otherwise increment
+        console.log(nextIndex);
+        if(index == 30){
+            images.length= 0;
+            console.log(images.length)
+            loadImages();
+            setTimeout(refreshPage, 5000); // reload the page after every cycle to automatically update for new results
+            console.log(images.length)
+        }
+        setTimeout(updateImage, setTimer(index), nextIndex);
+    }
+
+    function refreshPage(){
+        window.location.reload(true);
+        console.log("page reloaded!");
+    }
+
+    // set different waiting times for different images in the array
+    function setTimer(index){
+        let timer = 0;
+        if (index < 15){
+            timer = 250;
+        }
+        else if (index > 14 && index < 25){
+            timer = 350;
+        }
+        else if (index > 24 && index < 30){
+            timer = 1000;
+        }
+        else if (index == 30){
+            timer = 5000;
+        }
+        else {
+            timer = 500;
+        }
+        return timer;
+    }
+
+</script>
+
+</body>
+</html>
